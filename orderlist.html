@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<ol id="mylist">
+<li id="t1">Tea</li>
+<li id="c1">Coffee</li>
+<li id="m1">Milk</li>
+</ol>
+<input type="button" value="Append" onclick="fun1()"></input>
+<input type="button" value="Remove" onclick="fun2()"></input>
+<input type="button" value="Replace" onclick="fun3()"></input>
+<script>
+function fun1()
+{
+var n=document.createElement("LI");
+var t=document.createTextNode("Shake");
+n.appendChild(t);
+document.getElementById("mylist").appendChild(n);
+}
+function fun2()
+{
+var n=document.getElementById("c1");
+n.parentNode.removeChild(n);
+}
+function fun3()
+{
+var n=document.createElement("LI");
+var t=document.createTextNode("Coffee");
+n.appendChild(t);
+var i=document.getElementById("m1");
+i.parentNode.replaceChild(n,i);
+}
+</script>
+</body>
+</html>
